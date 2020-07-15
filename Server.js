@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use("/gradients", require("./routes/api/gradient"));
 
-if (process.env.NODE_ENV == "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
